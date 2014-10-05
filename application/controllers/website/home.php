@@ -13,16 +13,8 @@ class Home extends CI_Controller {
         $this->Detect = new Detect();
         $this->load->model('frontend/m_home');
         if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
-
             $this->template->set_template('wap');
-            $this->template->write_view('header', 'layouts/wap/header', array());
-            $this->template->write_view('banner', 'layouts/wap/banner', $data);
-            $this->template->write_view('menu', 'layouts/wap/menu', array());
-            $this->template->write_view('footer', 'layouts/wap/footer', array());
         } else {
-
-
-
             $this->template->set_template('home_web');
         }
     }
@@ -37,13 +29,15 @@ class Home extends CI_Controller {
                 <script>alert('Thanks for send contact message!');</script>
             ";
         }
-        if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
 
-            $this->template->write_view('content', 'website/home/index_wap');
+        $this->m_home->_table = "article";
+        $this->m_home->_key = "id";
+        $data['home'] = $this->m_home->get_by_id(3);
+
+        if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
+            $this->template->write_view('content', 'website/wap/slide_home', $data);
         } else {
-            $this->m_home->_table = "article";
-            $this->m_home->_key = "id";
-            $data['home'] = $this->m_home->get_by_id(3);
+
             $this->template->write_view('content', 'website/slide_home', $data);
         }
         $this->template->render();
@@ -51,7 +45,11 @@ class Home extends CI_Controller {
 
     public function ajax_home() {
         $data['slide'] = $this->m_home->get_slide();
-        $this->load->view('website/slide_home', $data);
+        if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
+            $this->load->view('website/wap/slide_home', $data);
+        } else {
+            $this->load->view('website/slide_home', $data);
+        }
     }
 
     public function ajax_about() {
@@ -59,7 +57,11 @@ class Home extends CI_Controller {
         $this->m_home->_key = "id";
         $data = $this->m_home->get_by_id(2);
         $data['product'] = $this->m_home->get_product(12);
-        $this->load->view('website/view_about', $data);
+        if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
+            $this->load->view('website/wap/view_about', $data);
+        } else {
+            $this->load->view('website/view_about', $data);
+        }
     }
 
     public function ajax_menu() {
@@ -70,17 +72,26 @@ class Home extends CI_Controller {
     }
 
     public function ajax_reservations() {
-
-        $this->load->view('website/view_reservations');
+        if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
+            $this->load->view('website/wap/view_reservations');
+        } else {
+            $this->load->view('website/view_reservations');
+        }
+        
     }
 
     public function ajax_product() {
         $page = $this->input->get("page", TRUE);
         if (!is_array($page))
             $data['product'] = $this->m_home->get_product(12, $page);
-        if (!empty($data['product']))
-            $this->load->view('website/view_product', $data);
-        else {
+        if (!empty($data['product'])) {
+            if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
+                $this->load->view('website/wap/view_product', $data);
+            } else {
+                $this->load->view('website/view_product', $data);
+            }
+            
+        } else {
             echo "end";
         }
     }

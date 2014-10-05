@@ -1,0 +1,416 @@
+/* 
+    Document   : 
+    Created on : 15-09-2014, 15:06:05
+    Author     : duocnt
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+html,body{height:100%; background: #f3f3f3;}
+figure{margin:0}html,body,form,fieldset,p,div,h1,h2,h3,h4,h5,h6{-webkit-text-size-adjust:none}input{outline:none;-webkit-appearance:none}img{border:none} a,input{color:#000;outline:none} a{text-decoration:none}input[type="checkbox"]{margin:0;vertical-align:-2px}button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"] > input[type="button"]::-moz-focus-inner{border:0 !important;padding:0 !important}
+.noSelect,body{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none}
+body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; padding: 0}
+.wapper{width: 100%; height: 100%}
+.seo{display:none}
+
+.wapper{
+    width: 100%;
+    background: #fff;
+}
+.container{
+    max-width: 640px;
+    margin: auto;
+
+    font: normal normal normal 13px 'open sans', sans-serif;
+    background: url("../image/bg.jpg") fixed ;
+    background-attachment: fixed;
+    background-color: rgb(227, 235, 182);
+    background-size: cover;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+
+}
+.main-contant{
+    max-width: 640px;
+    min-height: 50px;
+
+}
+.logo{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.main-navi{
+    background: #fff;
+    width: 300px;
+    margin-top: 60px;
+    position: absolute;
+    right: 10px;
+    border-radius: 3px;
+    border: 1px solid #6C0F80;
+    display: none;
+    z-index: 10;
+}
+.main-navi ul li{
+    border-bottom: 1px solid #6C0F80;
+    padding: 10px;
+    color: #E13300;
+    cursor: pointer;
+}
+.main-navi ul li:last-child{
+    border-bottom: none;
+}
+.main-navi ul li:hover{
+    background: #6C0F80;
+    color: #fff;
+}
+.footer{
+    width: 100%;
+    background-color: rgba(42, 42, 42, 0.498039);
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    margin-top: 17px;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgb(42, 42, 42);
+    box-shadow: rgba(0, 0, 0, 0.701961) 0px 0px 5px 0px;
+    border-top: 0px solid rgb(255, 255, 255);
+    border-bottom: 0px solid rgb(255, 255, 255);
+}
+.button-menu{
+    background: url("../image/menu-icon.png");
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.close_menu{
+    background: url("../image/close-menu-icon.png") !important;
+}
+.content{
+    min-height: 150px 
+}
+#about-main {
+    padding: 10px;
+    text-align: justify;
+    min-height: 300px;
+    color: #fff;
+}
+.main-list-about ul {
+    display: inline;
+}
+.main-list-about ul li {
+    height: 215px;
+    background: #5C3535;
+    display: inline-table;
+    margin-bottom: 20px;
+    margin-left: 12px;
+}
+.main-list-li {
+    width: 215px;
+}
+.list-imag {
+    background: #fff;
+    height: 128px;
+    cursor: pointer;
+}
+.main-list-about ul li img {
+    opacity: 1;
+    transition: opacity 0.4s ease 0s;
+    -webkit-transition: opacity 0.4s ease 0s;
+    background: #fff;
+}
+.sub-title {
+    padding: 10px;
+}
+.main-list-about ul li img:hover{
+    opacity: 0.5;
+    transition: opacity 0.4s ease 0s;
+    -webkit-transition: opacity 0.4s ease 0s;
+    background: #fff;
+}
+.main-list-about{
+    max-width: 458px;
+    margin-left: 12%;
+}
+.show-more {
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 10px;
+    color: rgb(255, 255, 255);
+    font: normal normal normal 14px/2.3em 'open sans', sans-serif;
+    text-decoration: underline;
+    width: 100%;
+}
+@media only screen and (max-width: 344px) {
+    .logo{
+        width: 72%;
+    }
+    .logo img{
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .caption{
+        font-size: 0.8em;
+    }
+    .caption h3{
+        color: #ffd200;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        font-size: 1.4em;
+
+    }
+}
+@media only screen and (max-width: 450px) {
+    .caption{
+        font-size: 0.8em;
+    }
+    .caption h3{
+        color: #ffd200;
+        margin-top: 4%;
+        margin-bottom: 1%;
+        font-size: 1.4em;
+
+    }
+}
+@media only screen and (max-width: 380px) {
+    .caption{
+        font-size: 0.8em;
+    }
+    .caption h3{
+        color: #ffd200;
+        margin-top: 3%;
+        margin-bottom: 1%;
+        font-size: 1.2em;
+
+    }
+}
+
+
+.slogan-download{
+    color: #808080;
+    /*padding-left: 7%;*/
+}
+
+.container-wapper{
+    /*max-width: 640px;*/
+    margin: 0 auto;
+
+}
+.button-download-detail{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.main-game .container-wapper h3.title-info-game{
+    color: #6d6d6d;
+    font-weight: bold;
+    margin: 0px;
+    padding: 5px 0px 10px 10px;
+    margin-bottom: 15px;
+    border-bottom: #e9e9e9 solid 1px;
+}
+.des-detail{
+    color: #464646;
+    text-align: justify;
+}
+a.read-more, a.read-less{
+    color: #2c8ac0;
+}
+.game-info{
+    border: #cacaca dashed 1px;
+    padding: 18px;
+    margin: 18px 0px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: #f6f6f6;
+    color: #464646;
+}
+
+ul.rat{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+ul.rat li{
+    list-style: none;
+    float: left;
+    margin-right: 3px;
+    color: #939393;
+}
+ul.rat li.active{
+    width: 18px;
+    height: 16px;
+    display: block;
+    background: url("../image/rate1.png") no-repeat left top;
+}
+ul.rat li.inactive{
+    width: 18px;
+    height: 16px;
+    display: block;
+    background: url("../image/rate0.png") no-repeat right top;
+}
+
+.title-slide-home{
+    position: absolute; 
+    bottom: 1%; 
+    left: 0px; 
+    width: 100%;
+    color: #ababab;
+    padding: 2% 0%;
+    font-size: 0.9em;
+    background: url("../image/title-slide-home-bg.png");
+}
+.title-slide-home h3{
+    color: #ffd200;
+    margin: 0px;
+    padding: 0px;
+    margin: 0% 0% 2% 0%;
+}
+.title-slide-home span a{
+    font: bold 24px Arial;
+    color: #ededed;
+    letter-spacing: -0.6px;
+    line-height: 22px;
+    margin-left: 5%;
+}
+.title-slide-home .news-event{
+    font:bold 24px Arial;
+    color: #eedc0f;
+    letter-spacing: -0.6;
+    line-height: 22px;
+    float: right;
+    vertical-align: middle;
+    margin: 0.5% 3% 0% 0%
+}
+.title-slide-home .news-event img{
+    width: 10px;
+    height: 16px;
+}
+.slide{
+    margin-top: 15px;
+}
+@media only screen and (max-width:600px){
+    .title-slide-home span a, .title-slide-home .news-event{
+        font-size: 20px;
+    }
+    .title-slide-home .news-event img{
+        width: 9px;
+        height: 14px;
+    }
+}
+@media only screen and (max-width:480px){
+    .title-slide-home span a, .title-slide-home .news-event{
+        font-size: 16px;
+    }
+    .title-slide-home .news-event img{
+        width: 8px;
+        height: 12px;
+    }
+}
+@media only screen and (max-width:384px){
+    .title-slide-home span a, .title-slide-home .news-event{
+        font-size: 12px;
+        margin-right: 20px;
+    }
+    .title-slide-home .news-event img{
+        width: 6px;
+        height: 9px;
+    }
+}
+#menu-main, #reservations-main{
+    padding: 10px;
+    text-align: justify;
+}
+#reservations-main{
+    color: #fff;
+}
+
+#form-info-input input{
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 42, 42);
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: 0px solid rgb(255, 255, 255);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    padding: 5px;
+    margin: 0px 0px 5px;
+    width: 100%;
+    -webkit-appearance: none;
+    margin-right: 5px;
+}
+#form-info-textarea textarea{
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 42, 42);
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: 0px solid rgb(255, 255, 255);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    padding: 5px;
+    margin: 0px 0px 5px;
+    width: 100%;
+    resize: none;
+    -webkit-appearance: none;
+    min-height: 103px;
+}
+#form-info-textarea input{
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 42, 42);
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    box-sizing: border-box;
+    border-radius: 0px;
+    padding: 5px;
+    border: none;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    cursor: pointer;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 12px;
+}
+#form-info{
+    margin: auto;
+    width: 320px;
+    margin-top: 20px;
+}
+#reservations-main h1{
+    font: normal normal normal 40px/1.4em impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
+    color: rgb(255, 255, 255);
+}
+#tel{
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    color: rgb(255, 255, 255);
+    float: left;
+    width: 160px;
+    margin-right: 155px;
+    margin-bottom: 20px;
+}
