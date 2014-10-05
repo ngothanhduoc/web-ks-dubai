@@ -1,0 +1,236 @@
+    .menu-bar{
+        max-width: 640px;
+        margin: 0px auto;
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        box-shadow: none;
+        border: #ccc solid 0px;
+        
+        -webkit-box-shadow: 0px 2px 3px 0px #D5D5D5;
+        -moz-box-shadow: 0px 2px 3px 0px #D5D5D5;
+        box-shadow: 0px 2px 3px 0px #D5D5D5;
+    }
+    .menu-box{
+        position: absolute;
+        top: 0%;
+    }
+    .tab-menu{
+        background: none;
+        height: auto;
+        padding: 0px;
+        position: relative;
+    }
+    .tab-menu a{
+        display: block;
+        font-size: 27px;
+        margin-top: 13%;
+        color: #f0bfbf;
+    }
+    .tab-menu a:hover{
+        color: #f26202;
+    }
+    @media only screen and (max-width: 500px) {
+        .tab-menu a{
+           display: block;
+           font-size: 20px;
+           margin-top: 13%;
+           color: #f0bfbf;
+       }   
+    }
+    @media only screen and (max-width: 400px) {
+        .tab-menu a{
+           display: block;
+           font-size: 18px;
+           margin-top: 13%;
+           color: #f0bfbf;
+       }   
+    }
+    @media only screen and (max-width: 350px) {
+        .tab-menu a{
+           display: block;
+           font-size: 16px;
+           margin-top: 13%;
+           color: #f0bfbf;
+       }   
+    }
+    
+    .list-news img{
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+    .list-news h3{
+        margin: 0px;
+        font-size: 14px;
+    }
+    .list-news span{
+        color: #878787;
+        position: absolute;
+        bottom: 10%;
+        left: 0%;
+        font-size: 12px;
+    }
+    
+    table.list-news tr:last-child td{
+        border-bottom: none!important;
+    }
+    
+    .container{
+        margin-top: 0px;
+        overflow: hidden;
+    }
+    #game-menu{
+        /*max-width: 640px; */
+        margin: 0 auto;
+        background: #fff; 
+        z-index: 99999; 
+        display: none;
+    }
+    #game-menu .quaylai{
+        display: block; 
+        position: absolute; 
+        left: 0%; 
+        top: 0%; 
+        width: 30%; 
+        height: 36px;
+        line-height: 38px;
+        color: #f26202;
+        font-size: 13px;
+        font-weight: bold;
+        padding-left: 10px;
+        
+    }
+    #game-menu .moboportal{
+        display: block; 
+        position: absolute; 
+        right: 0%; 
+        top: 0%; 
+        width: 30%; 
+        height: 36px;
+        line-height: 38px;
+        font-size: 13px;
+        font-weight: bold;
+        padding-right: 10px;
+        color: #f26202;
+        text-align: right;
+       
+    }
+    #game-menu table{
+        color: #585858;
+    }
+    #game-menu table p{
+        padding: 0px;
+        margin: 0px;
+    }
+    #game-menu table .name{
+        font-size: 16px;
+        color: #585858;
+        font-weight: bold;
+    }
+    #game-menu table .user{
+        padding: 5px 0px 5px 0px;
+        font-size: 12px;
+        
+    }
+    
+    #game-menu table .td-format{
+        padding: 5px;
+        border-bottom: #e9e9e9 solid 1px;
+    }
+    .menu-game{
+        width: 100%;
+        height: 36px;
+        margin-bottom: 5px;
+        /*background: url("../image/game-menu-bg.png") repeat-x left top;*/
+        
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #ebebeb));
+	background:-moz-linear-gradient(center top, #f5f5f5 5%, #ebebeb 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#ebebeb');
+    }
+    
+    .cont-detail img{
+        max-width: 100%!important;
+    }
+    
+    .toolbar-forum{
+        width: 100%;
+        height: 32px;
+        background: url("../image/toolbar-forum-bg.png") repeat-x left top;
+    }
+    
+.f-toolbar{
+    width: 100%;
+    height: 32px;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    /*
+    margin-top: 20px;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -moz-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
+    */
+    background: url("../image/toolbar-forum-bg.png") repeat-x left top;
+}
+.f-toolbar h3{
+    font-size: 13px;
+    color: #fff;
+    margin-top: 9px;
+    text-transform: uppercase;
+}
+
+.f-dropdown{
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin-top: -30px;
+    margin-right: 15px;
+    cursor: pointer;
+    background: url("../image/f-dropdown.png") no-repeat center center;
+}
+.f-content{
+    width: 100%;
+    padding: 7px;
+    float: left;
+}
+.item-f{
+    width: 100%;
+    margin-bottom: 7px;
+    float: left;
+    border-bottom: #e9e9e9 solid 1px;
+    padding-bottom: 7px;
+    color: #585858;
+}
+.item-f h3{
+    margin: 0px;
+    font-size: 18px;
+    color: #585858;
+    font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.item-f img{
+    float: left;
+    margin-right: 7px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.f-item-info{
+    margin: 8px 0px;
+}
+.f-item-info a{
+    font-size: 14px;
+    color: #585858;
+}
+.f-item-info img{
+    float: none;
+}
+.item-f p{
+    font-size: 13px;
+    color: #939393;
+    margin: 0px;
+    padding: 0px;
+}

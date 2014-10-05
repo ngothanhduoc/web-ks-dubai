@@ -1,0 +1,289 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 17, 2014, 11:39:02 AM
+    Author     : vinhtt
+*/
+hr{
+    width: 94%;
+    border: solid 1px #e8e8e8;
+}
+hr.dotted{
+    border: none;
+    border-bottom: dotted 1px #c6c6c6;
+    width: 100%;
+}
+hr.block-news-end{
+    width: 99%;
+    border: solid 1px #D5D5D5;
+    -webkit-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    -moz-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    box-shadow: 0px 2px 3px 0px #D5D5D5;
+}
+.block-cat{
+    height: 30px;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 10px;
+}
+.block-cat .block-cat-title{
+    text-transform: uppercase;
+    font:bold 15px Arial;
+    color: #6d6d6d;
+    line-height: 22px;
+    float: left;
+    margin: 10px 0px 10px 15px;
+}
+.block-cat .collapse-arrow{
+    background: url("../image/collapse-arrow.png") no-repeat;
+    float: right;
+    height: 12px;
+    width: 19px;
+    margin-right: 4%;
+    margin-top: 15px;
+}
+.block-cat .collapse-arrow-right{
+    background: url("../image/collapse-arrow-right.png") no-repeat;
+    float: right;
+    height: 19px;
+    width: 12px;
+    margin-right: 4%;
+    margin-top: 12px;
+}
+.block-news{}
+.block-news .hot-news-banner{
+    margin: 15px 0px 15px 0px;
+}
+.block-news .hot-news-banner img{
+    width: 100%;
+    max-width: 600px;
+
+}
+.block-news .list-news{
+    margin-left: 2px;
+    margin-right: 2px;
+    min-height: 70px;
+    margin-top: 10px;
+}
+.block-news .list-news img{
+    float: left;
+    width: 83px;
+    height: 65px;
+    margin-right: 2%;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.block-news .list-news a{
+    font: bold 13px Arial;
+    color: #393939;
+    letter-spacing: -0.65px;
+    line-height: 20px;
+    text-transform:fullsize-kana;
+}
+.block-news .list-news .list-news-title{
+
+}
+.block-news .list-news-date, .detail-news-date{
+    font: 12px Arial;
+    color: #878787;
+    letter-spacing: -0.55px;
+    line-height: 20px;
+    float: left;
+}
+.block-news .list-news-date .list-game-name, .detail-news-date .detail-game-name{
+    font: bold 12px Arial;
+    color: #ff7200;
+    letter-spacing: -0.55px;
+    line-height: 30px;
+}
+
+.block-news .block-cat-more{
+    text-align: center;
+    height: 27px;
+    background: #fbfbfb;
+    color: #868686;
+    -webkit-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    -moz-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    box-shadow: 0px 2px 3px 0px #D5D5D5;
+    padding-top: 1px;
+    cursor: pointer;
+}
+.block-news .block-cat-more a{
+    font: bold 12px Arial;
+    color: #868686;
+    letter-spacing: -0.55px;
+    line-height: 20px;
+}
+.block-news .content-target{
+    width: 100%;
+
+}
+.content-target .radius{
+    max-height: 230px;
+    overflow: hidden;
+    max-width: 600px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.content-target .title-slide-home {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    bottom: 0%;
+}
+.block-news .content-target span{
+    float: left;
+    width: 80%;
+    margin-left: 4%;
+}
+.block-news .content-target span a{
+    color: #FFFFFF;
+    font:bold 14px Arial;
+    letter-spacing: -0.6px;
+    line-height: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+.block-news .content-target .news-event{
+    margin: 1% 5% 0 0;
+}
+.block-news .content-target .news-event img{
+    width: 12px;
+    height: 19px;
+}
+
+/*-------------- List ---------------*/
+.cat-list-news{
+    background-color: #ffffff;
+    width: 100%;
+    float: left;
+}
+.cat-list-news .cat-title{
+    font: bold 15px Arial;
+    color: #6d6d6d;
+    line-height: 22px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border:solid 1px #c6c6c6;
+    padding: 7px 0px 7px 0px;
+    margin: 10px 0px 0px 0px;
+    width: 100%;
+    float: left;
+    background: -webkit-linear-gradient(90deg, rgb(239,239,239), rgb(246,246,246)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, rgb(239,239,239), rgb(246,246,246)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, rgb(239,239,239), rgb(246,246,246)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, rgba(239,239,239,1), rgba(246,246,246,1)); /* Standard syntax */
+}
+.cat-list-news .collapse-arrow{
+    background: url("../image/collapse-arrow.png") no-repeat;
+    float: right;
+    height: 12px;
+    width: 19px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+/*-------------- Detail ---------------*/
+.detail-news-title{
+    font: bold 18px Arial;
+    color: #393939;
+    line-height: 22px;
+    letter-spacing: -0.6px;
+    /*margin: 0% 3% 1%;*/
+}
+.detail-news-date{
+    /*margin-left: 3%;*/
+    width: 100%;
+    border-bottom: 1px solid #E4E4E4;
+    margin-bottom: 15px;
+}
+.detail-news-content{
+    /*margin: 6% 3% 3%;*/
+    text-align: justify;
+}
+.detail-news-content *{
+    width: 100% !important;
+}
+.detail-news-like{
+    font: 12px Arial;
+    color: #8e8e8e;
+    height: 20px;
+    border-top: 1px solid #e4e4e4;
+    padding: 10px;
+    -webkit-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    -moz-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    box-shadow: 0px 2px 3px 0px #D5D5D5;
+    line-height: 25px;
+}
+.detail-news-like span{
+    float:right;
+}
+.detail-game-download{
+    margin: 1%;
+    height: 80px;
+    
+}
+.detail-game-download img{
+    float:left;
+    margin-bottom: 3%;
+    margin-right: 3%;
+    width: 65px;
+    height: 65px;
+}
+.detail-game-download div{
+    font: 14px Arial;
+    color:#808080;
+    line-height: 22px;
+}
+.detail-game-download a{
+
+}
+.detail-game-download a img{
+    max-width: 220px;
+    height: 40px;
+    width: 70%;
+    margin: 1% 0;
+}
+@media only screen and (max-width:600px){
+    .block-news .content-target span a, .block-news .content-target span{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+@media only screen and (max-width:480px){
+    .block-news .content-target span a, .block-news .content-target span{
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .block-news .content-target .news-event img{
+        width: 10px;
+        height: 15px;
+    }
+}
+@media only screen and (max-width:384px){
+    .block-news .content-target span a, .block-news .content-target span{
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
+.cat-title-category{
+    margin-left: 20px;
+}
+.box-game-bottom a{
+    color: #868686;
+    font-weight: bold;
+}
+.box-shawdo-news{
+    -webkit-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    -moz-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    box-shadow: 0px 2px 3px 0px #D5D5D5;
+    height: 3px;
+}

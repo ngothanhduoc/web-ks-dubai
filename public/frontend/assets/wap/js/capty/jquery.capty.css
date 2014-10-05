@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+div.capty-caption {
+	background-color: #000;
+	color: #FFFFFF;
+	font:bold 14px Arial;
+	padding-left: 3%;
+	padding-top: 2%;
+        letter-spacing: -0.6px;
+        line-height: 30px;
+        text-align: left;
+        height: 40% !important;
+        top: -40% !important;
+}
+div.capty-wrapper{
+    width: 100% !important;
+    max-height: 230px;
+    max-width: 600px !important;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+div.capty-image{
+    max-height: 230px;
+    overflow: hidden;
+}
+div.capty-caption a {
+	//color: #318DAD;
+	//font: bold 11px verdana;
+	//text-decoration: none;
+	//text-shadow: none;
+}
+div.capty-image{
+}
+@media only screen and (max-width:600px){
+    div.capty-caption {
+        font-size:12px;
+        line-height: 20px;
+    }
+}
+@media only screen and (max-width:480px){
+    div.capty-caption {
+        line-height: 18px;
+        font-size:11px;
+    }
+}
+@media only screen and (max-width:384px){
+    div.capty-caption {
+        line-height: 14px;
+        font-size:10px;
+    }
+}

@@ -1,0 +1,300 @@
+/* 
+    Document   : style
+    Created on : Oct 1, 2014, 12:04:40 AM
+    Author     : Thanh Duoc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+body{
+    font: normal normal normal 13px 'open sans', sans-serif;
+    background: url("../images/bg.jpg") fixed ;
+    background-attachment: fixed;
+    background-color: rgb(227, 235, 182);
+    background-size: cover;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+.header{
+    position: absolute;
+    width: 1349px;
+    height: 49px;
+    left: -185px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgb(42, 42, 42);
+    box-shadow: rgba(0, 0, 0, 0.701961) 0px 0px 5px 0px;
+    border-top: 0px solid rgb(255, 255, 255);
+    border-bottom: 0px solid rgb(255, 255, 255);
+}
+.menu{
+    width: 980px;
+    margin-left: 0px;
+}
+.navi{
+    visibility: visible;
+    left: 525px;
+    top: 13px;
+    width: 638px;
+    min-height: 22px;
+    position: absolute;
+
+}
+.content{
+    width: 100%;
+}
+.main{
+    margin: auto; 
+    background: rgba(18, 39, 16, 0.57);
+    width: 980px;
+    margin-top: 49px;
+}
+.main-navi{
+    float: right;
+}
+.main-navi ul{
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+}
+.main-navi ul li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    font: normal normal normal 17px/1.4em 'open sans', sans-serif;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+    transition: color 0.4s ease 0s;
+    -webkit-transition: color 0.4s ease 0s;
+}
+.main-navi ul li:hover, .active{
+    color: rgb(174, 194, 64) !important;
+    transition: color 0.4s ease 0s;
+    -webkit-transition: color 0.4s ease 0s;
+}
+.main-navi ul li:last-child{
+    border-right: none;
+}
+.footer{
+    width: 100%;
+    height: 378px;
+    background-color: rgba(42, 42, 42, 0.498039);
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    margin-top: 40px;
+}
+.main-ft{
+    margin: auto; 
+    width: 980px;
+    min-height: 343px;
+    padding-top: 35px;
+}
+.header-ft{
+    margin: auto; 
+    background: #000;
+    width: 980px;
+    height: 240px;
+    background-color: rgba(42, 42, 42, 0.498039);
+}
+.company-info{
+    width: 100%;
+
+}
+.company-info span:first-child{
+    float: left;
+    margin-top: 65px;
+    color: #fff;
+    margin-left: 10px;
+}
+.slide{
+    margin-top: 70px;
+}
+.logo{
+    position: absolute;
+    top: 25px;
+    z-index: 100;
+    left: 172px;
+}
+.logo img{
+    position: relative;
+    z-index: 1000;
+}
+.arrow-right {
+    width: 0px;
+    height: 0px;
+    border-bottom: 23px solid transparent;
+    border-right: 13px solid #FFFFFF;
+    position: absolute;
+    top: 67px;
+    z-index: 10;
+}
+#about-main{
+    padding: 35px;
+    text-align: justify;
+    min-height: 300px;
+    padding-top: 100px;
+    color: #fff;
+
+}
+.main-list-about ul{
+    display: inline;
+}
+
+.main-list-about ul li{
+    display: inline-table;
+    height: 215px;
+    background: #5C3535;
+    display: inline-table;
+    margin-bottom: 20px;
+    margin-left: 12px;
+}
+.space{
+    display: none;
+}
+.main-list-about ul li img:hover{
+    opacity: 0.5;
+    transition: opacity 0.4s ease 0s;
+    -webkit-transition: opacity 0.4s ease 0s;
+    background: #fff;
+}
+.main-list-about ul li img{
+    opacity: 1;
+    transition: opacity 0.4s ease 0s;
+    -webkit-transition: opacity 0.4s ease 0s;
+    background: #fff;
+}
+.list-imag{
+    background: #fff;
+    height: 128px;
+    cursor: pointer;
+}
+.sub-title{
+    padding: 10px;
+}
+.sub-title h2{
+    font: normal normal normal 25px/1.4em impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
+    color: #F0A855;
+    white-space: nowrap;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+.sub-title span{
+    color: rgb(255, 255, 255);
+    white-space: pre-line;
+    font: normal normal normal 14px/1.4em 'open sans', sans-serif;
+}
+.box-info{
+    padding: 20px;
+    padding-top: 70px;
+}
+.list-about h3{
+    font-size: 20px;
+}
+.main-list-about{
+    margin-left: -12px;
+}
+.main-ajax{
+    min-height: 500px;
+}
+#reservations-main{
+    padding-left: 48px;
+    padding-top: 100px;
+}
+#reservations-main h1{
+    font: normal normal normal 70px/1.4em impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
+    color: rgb(255, 255, 255);
+}
+#tel{
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    color: rgb(255, 255, 255);
+    float: left;
+    width: 160px;
+    margin-right: 155px;
+}
+#form-info-input{
+    width: 295px;
+    float: left;
+}
+#form-info-input input{
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 42, 42);
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: 0px solid rgb(255, 255, 255);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    padding: 5px;
+    margin: 0px 0px 5px;
+    width: 290px;
+    -webkit-appearance: none;
+    margin-right: 5px;
+}
+#form-info-textarea textarea{
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 42, 42);
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: 0px solid rgb(255, 255, 255);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    padding: 5px;
+    margin: 0px 0px 5px;
+    width: 290px;
+    resize: none;
+    -webkit-appearance: none;
+    min-height: 103px;
+}
+#form-info-textarea input{
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 42, 42);
+    font: normal normal normal 15px/1.4em 'open sans', sans-serif;
+    box-sizing: border-box;
+    border-radius: 0px;
+    padding: 5px;
+    border: none;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    cursor: pointer;
+    float: right;
+    margin-right: 14px;
+}
+.form-contact{
+    margin-top: 25px;
+}
+.map{
+    margin-top: 90px;
+}
+.main-list-li{
+    width: 215px;
+}
+.show-more{
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 10px;
+    color: rgb(255, 255, 255);
+    font: normal normal normal 14px/2.3em 'open sans', sans-serif;
+    text-decoration: underline;
+    width: 100%;
+}

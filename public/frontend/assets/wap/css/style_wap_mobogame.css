@@ -1,0 +1,492 @@
+/* 
+    Document   : style_wap_mobogame
+    Created on : 15-09-2014, 15:06:05
+    Author     : duocnt
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+html,body{height:100%; background: #f3f3f3;}
+figure{margin:0}html,body,form,fieldset,p,div,h1,h2,h3,h4,h5,h6{-webkit-text-size-adjust:none}input{outline:none;-webkit-appearance:none}img{border:none} a,input{color:#000;outline:none} a{text-decoration:none}input[type="checkbox"]{margin:0;vertical-align:-2px}button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"] > input[type="button"]::-moz-focus-inner{border:0 !important;padding:0 !important}
+.noSelect,body{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none}
+body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; padding: 0}
+.wapper{width: 100%; height: 100%}
+.seo{display:none}
+.header-bar{
+    height: 35px;
+    width: 100%;
+    background: #f3f3f3;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.header-bar img.logo-hd{
+    padding-top: 7px;
+    padding-left: 10px;
+    position: absolute;
+}
+.header-bar .line-hd{
+    border-left: 1px solid #D5D5D5;
+    width: 3px;
+    height: 100%;
+    margin-left: 80px;
+    float: left;
+}
+.pr{
+    float: left;
+    display: block;
+    overflow: hidden;
+}
+.pr img.pr-img{
+    padding-top: 7px;
+    padding-left: 10px;
+    position: absolute;
+}
+.pr img.pr-hot-icon{
+    height: 14px;
+    float: right;
+    margin-left: -22px;
+    margin-top: -12px;
+    position: relative;
+    right: 0;
+}
+.pr span{
+    float: left;
+    margin-left: 40px;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    padding-top: 13px;
+}
+.banner-slide{
+    width: 100%;
+    height: 160px;
+    background: #DFDFDF;
+}
+.hb-content{
+    width: 320px;
+    margin: auto;
+}
+.menu-bar{
+    height: 43px;
+    width: 100%;
+    background: #f3f3f3;
+    -webkit-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    -moz-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    box-shadow: 0px 2px 3px 0px #D5D5D5;
+}
+.menu-box{
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    width: 100%;
+}
+.tab-menu{
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -webkit-box-flex: 1;
+    overflow: hidden;
+    background: #efefef;
+    text-align: center;
+    height: 43px;
+    padding-top: 13px;
+    font-size: 16px;
+    color: #656565;
+}
+.tab-menu a{
+    color: #656565;
+    font-weight: bold;
+}
+#active{
+    color: #f26202;
+}
+.border-left-right{
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+}
+.container{
+    margin-top: 10px;
+    background: #fff;
+    min-height: 300px;
+
+}
+.container .main{
+    border-top: 1px solid #e8e8e8;
+}
+.container-wapper{
+    padding-left: 10px; 
+    padding-right: 10px; 
+}
+.title{
+    height: 30px;
+}
+.title .text{
+    padding-left: 15px;
+    padding-top: 7px;
+    color: #aba9a9;
+    font-weight: bold;
+}
+
+.box-game{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e8e8e8;
+    min-height: 70px;
+}
+.box-game img{
+    position: absolute;
+    left: 0px;
+}
+.box-game a{
+    position: relative;
+    display: block;
+    padding-left: 82px;
+}
+.box-game a .name {
+    display: block;
+    font-weight: bold;
+    color: #585858;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.box-game a .desc {
+    display: block;
+    padding: 10px 0 5px;
+    color: #595959;
+}
+.box-game a .user {
+    display: block;
+    font-size: 12px;
+    color: #9b9b9b;
+    width: 60%;
+}
+.suport-img{
+    display: block;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+.box-suport{
+    margin-top: -15px;
+    position: relative;
+    width: 30%;
+    float: right;
+}
+.box-game-bottom{
+    border-top: 1px solid #e8e8e8;
+    text-align: center;
+    height: 27px;
+    background: #fbfbfb;
+    color: #868686;
+    -webkit-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    -moz-box-shadow: 0px 2px 3px 0px #D5D5D5;
+    box-shadow: 0px 2px 3px 0px #D5D5D5;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.box-game-bottom:hover{
+    background: #eee;
+}
+.clear-box{
+    width: 100%;
+    height: 10px;
+    background: rgba(201, 201, 201, 0.25);
+}
+.footer{
+    height: 145px;
+    background: #fff;
+    border-top: 3px solid #d2d2d2;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    color: #696969;
+}
+.footer-top{
+    width: 100%;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 20px;
+}
+.footer-top span{
+    color: #696969;
+}
+.footer-top img{
+    position: absolute;
+    left: 10px;
+    top: 14px;
+}
+.footer-top a{
+    position: relative;
+    display: block;
+    padding-left: 60px;
+    padding-top: 14px;
+}
+.footer-top .name{
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer-bottom{
+    padding-top: 15px;
+    text-align: center;
+}
+.footer-top .box-suport{
+    margin-top: -15px;
+    position: relative;
+    float: right;
+    overflow: hidden;
+}
+.touchslider-nav-item {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.71);
+    margin: 0 1px;
+    display: inline-block;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+}
+.touchslider-nav-item-current {
+    background: rgba(255, 157, 6, 0.67);
+}
+.caption-slide{
+    background: rgba(0, 0, 0, 0.68) !important;
+    margin-top: -45px;
+    height: 42px;
+    width: 100%;
+    position: relative;
+    padding-top: 5px;
+}
+.caption-slide .slide-name-game{
+    color: #ffd200;
+    font-weight: bold;
+}
+.caption-slide .slide-name-user{
+    color: #a4a4a4;
+}
+.caption-slide span{
+    margin-left: 40px;
+    font-size: 12px;
+}
+.caption-slide img {
+    padding-left: 10px;
+    position: absolute;
+}
+.slide-page{
+    margin-top: -58px;
+    position: relative;
+    text-align: center;
+}
+
+/*-------------------Detail game----------------------*/
+.container .main-game{
+    background: url("../image/main-bg.png") repeat-x top left;
+    padding-top: 30px;
+}
+.border-r{
+    background: url("../image/menu-line-bg.png") repeat-y top right!important;
+}
+.caption{
+    position: absolute;
+    height: 33%;
+    min-width: 15%;
+    left: 0%;
+    top: 54%;
+    padding-left: 12%;
+    padding-right: 2%;
+    color: #ababab;
+
+    background: url("../image/detail-title-bg.png");
+    -webkit-border-radius: 0px 4px 4px 0px;
+    -moz-border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 4px 4px 0px;
+}
+.caption h3{
+    color: #ffd200;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    font-size: 1.3em;
+
+}
+.caption-img{
+    position: absolute;
+    width: 8%;
+    left: 2%;
+    top: 59%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .caption{
+        font-size: 0.8em;
+    }
+    .caption h3{
+        color: #ffd200;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        font-size: 1.4em;
+
+    }
+}
+@media only screen and (max-width: 450px) {
+    .caption{
+        font-size: 0.8em;
+    }
+    .caption h3{
+        color: #ffd200;
+        margin-top: 4%;
+        margin-bottom: 1%;
+        font-size: 1.4em;
+
+    }
+}
+@media only screen and (max-width: 380px) {
+    .caption{
+        font-size: 0.8em;
+    }
+    .caption h3{
+        color: #ffd200;
+        margin-top: 3%;
+        margin-bottom: 1%;
+        font-size: 1.2em;
+
+    }
+}
+
+
+.slogan-download{
+    color: #808080;
+    /*padding-left: 7%;*/
+}
+
+.container-wapper{
+    /*max-width: 640px;*/
+    margin: 0 auto;
+
+}
+.button-download-detail{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.main-game .container-wapper h3.title-info-game{
+    color: #6d6d6d;
+    font-weight: bold;
+    margin: 0px;
+    padding: 5px 0px 10px 10px;
+    margin-bottom: 15px;
+    border-bottom: #e9e9e9 solid 1px;
+}
+.des-detail{
+    color: #464646;
+    text-align: justify;
+}
+a.read-more, a.read-less{
+    color: #2c8ac0;
+}
+.game-info{
+    border: #cacaca dashed 1px;
+    padding: 18px;
+    margin: 18px 0px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: #f6f6f6;
+    color: #464646;
+}
+
+ul.rat{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+ul.rat li{
+    list-style: none;
+    float: left;
+    margin-right: 3px;
+    color: #939393;
+}
+ul.rat li.active{
+    width: 18px;
+    height: 16px;
+    display: block;
+    background: url("../image/rate1.png") no-repeat left top;
+}
+ul.rat li.inactive{
+    width: 18px;
+    height: 16px;
+    display: block;
+    background: url("../image/rate0.png") no-repeat right top;
+}
+
+.title-slide-home{
+    position: absolute; 
+    bottom: 1%; 
+    left: 0px; 
+    width: 100%;
+    color: #ababab;
+    padding: 2% 0%;
+    font-size: 0.9em;
+    background: url("../image/title-slide-home-bg.png");
+}
+.title-slide-home h3{
+    color: #ffd200;
+    margin: 0px;
+    padding: 0px;
+    margin: 0% 0% 2% 0%;
+}
+.title-slide-home span a{
+    font: bold 24px Arial;
+    color: #ededed;
+    letter-spacing: -0.6px;
+    line-height: 22px;
+    margin-left: 5%;
+}
+.title-slide-home .news-event{
+    font:bold 24px Arial;
+    color: #eedc0f;
+    letter-spacing: -0.6;
+    line-height: 22px;
+    float: right;
+    vertical-align: middle;
+    margin: 0.5% 3% 0% 0%
+}
+.title-slide-home .news-event img{
+    width: 10px;
+    height: 16px;
+}
+@media only screen and (max-width:600px){
+    .title-slide-home span a, .title-slide-home .news-event{
+        font-size: 20px;
+    }
+    .title-slide-home .news-event img{
+        width: 9px;
+        height: 14px;
+    }
+}
+@media only screen and (max-width:480px){
+    .title-slide-home span a, .title-slide-home .news-event{
+        font-size: 16px;
+    }
+    .title-slide-home .news-event img{
+        width: 8px;
+        height: 12px;
+    }
+}
+@media only screen and (max-width:384px){
+    .title-slide-home span a, .title-slide-home .news-event{
+        font-size: 12px;
+        margin-right: 20px;
+    }
+    .title-slide-home .news-event img{
+        width: 6px;
+        height: 9px;
+    }
+}
