@@ -27,6 +27,7 @@
 <![endif]-->
 
 <link rel="stylesheet" href="/public/admin/assets/css/custom.css">
+<link rel="stylesheet" href="/public/admin/assets/css/animate.css">
 <link rel="stylesheet" href="/public/admin/assets/libraries/ui/themes/base/jquery.ui.theme.css" type="text/css" />
 
 <script src="/public/admin/assets/js/backend/backend.jquery.1.1.9.js"></script>
@@ -61,11 +62,32 @@
 			},500);
 		}		
 	}
+        $(function(){
+            $("#alert").hide();
+             $.ajax({
+                url: "/backend/ajax/contact_count",
+                type: 'GET',
+                dataType: 'JSON',
+                data: {}
+            }).done(function(response) {
+                console.log(response);
+                if(response.code == "ok"){
+                    $("#alert").fadeIn();
+                    $("#count-con").append(response.count);
+                }
+            }).fail(function() {
+                alert('Có lỗi ! Không kết nối đến dữ liệu được.');
+            });
+        })
 </script>
 
 
 </head>
-
+   
+    <div id="alert" class="animated bounceInDown">
+        <a href="/backend/contact/index"> <span>You have <span id="count-con"></span> message contact</span><br/> </a>
+    </div>
+   
 <body class="withvernav">
 
 <div class="bodywrapper">

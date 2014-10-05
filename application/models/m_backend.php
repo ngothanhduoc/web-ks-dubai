@@ -65,11 +65,12 @@ class M_backend extends MY_Model {
     }
     
     function jqxGet($table, $field, $id){
-        $sql = $this->db_slave->select()
+        $this->db_slave->select()
 			      ->from($table)
                               ->where($field,$id)
 			      ->limit(1)
-			      ->get();
+			      ;
+        $sql = $this->db_slave->get(); 
         if (is_object($sql)) {
             return $sql->row_array();
         }
@@ -82,6 +83,11 @@ class M_backend extends MY_Model {
             return $sql->result_array();
         }     
 	
+    }
+    function count_contact() {
+        $this->_table = "contact";
+        $query = $this->db_slave->where('status', "on")->get($this->_table)->num_rows();
+        return $query;
     }
     function jqxGetgame($id) {
         $query = $this->db_slave->where('id_game', $id)->get($this->_table)->row_array();

@@ -2501,3 +2501,18 @@ blockquote.bq2 {
 	right: 18px;
 	background: url(../images/icons/refresh-captcha.png) no-repeat center;
 }
+#alert{
+    position: absolute;
+    z-index: 1000;
+    background: #FFCC05;
+    padding: 20px;
+    border-radius: 3px;
+    border: 3px solid #F00;
+    top: 0px;
+    left: 500px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+}

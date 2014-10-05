@@ -6,7 +6,7 @@
                 foreach ($slide as $key => $value) {
             ?>
             <li>
-                <img src="<?php echo $value['image'] ?>" alt="<?php echo $value['name'] ." - ".  $value['description'] ?>" />
+                <img src="<?php echo $value['image'] ?>" alt="<?php echo $value['name'] ." ".  $value['description'] ?>" />
             </li>
            <?php
                 }

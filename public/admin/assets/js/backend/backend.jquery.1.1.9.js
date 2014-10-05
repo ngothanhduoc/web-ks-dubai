@@ -505,7 +505,7 @@ function openKCFinderByPath(element, type)
             window.KCFinder = null;
             $(element).val(url);
         };
-        window.open('/admin/editor/kcfinder/browse.php?lang=en' + type, 'kcfinder_textbox',
+        window.open('/public/admin/editor/kcfinder/browse.php?lang=en' + type, 'kcfinder_textbox',
                 'status=0, toolbar=0, location=0, menubar=0, directories=0, resizable=1, scrollbars=0, width=700, height=500'
                 );
     } catch (e) {

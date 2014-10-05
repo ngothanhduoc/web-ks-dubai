@@ -1,28 +1,25 @@
 $(document).ready(function() {
     //-- init element ----------------------------------------------------------
-    //BACKEND.loadCat();
     BACKEND.init();
 });
 
-var arrCat = [];
+
 var BACKEND = {
-    API_URL_LIST: '/backend/listnewsevent',
-    AJAX_URL_DELETE: '/backend/deletenews/news',
-    AJAX_URL_UPDATE: '/backend/updatenews/news',
-    //API_URL_CAT: '/inside/ajax/get_list_cat/game_category',
-    API_URL_SORT: '/inside/ajax/updatesort/game',
+    API_URL_LIST: '/backend/list/product',
+    AJAX_URL_DELETE: '/backend/ajax/delete/admin_product/index/product/id_product',
+    AJAX_URL_UPDATE: '/backend/ajax/updatestatus/admin_product/index/product/id_product',
+    
     OBJ_GRID: null,
     dataAdapter: function() {
         //-- init grid view --------------------------------------------------------
         var source = {
             datatype: "jsonp",
             datafields: [
-                {name: 'id_news', type: 'int'},
-                {name: 'title', type: 'string'},
-                {name: 'id_game', type: 'int'},
-		{name: 'id_category', type: 'int'},
-		{name: 'create_time', type: 'string'},
-                {name: 'status', type: 'int'},
+                {name: 'id_product', type: 'int'},
+                {name: 'name', type: 'string'},
+                {name: 'status', type: 'string'},
+                {name: 'created_by', type: 'int'},
+               
             ],
             url: BACKEND.API_URL_LIST,
             sort: function() {
@@ -34,33 +31,16 @@ var BACKEND = {
         };
 
         var dataAdapter = new $.jqx.dataAdapter(source, {
-            /*
-            formatData: function(data) {
-                $.extend(data, {
-                    featureClass: "P",
-                    style: "full",
-                    maxRows: 50,
-                    username: "jqwidgets"
-                });
-                return data;
-            }
-            */
-			//loadComplete: function (records) {
             beforeLoadComplete: function (records) {
-				var p = dataAdapter.pagenum;
-				var s = dataAdapter.pagesize;
-				var j = p*s;
+                var p = dataAdapter.pagenum;
+                var s = dataAdapter.pagesize;
+                var j = p*s;
+
+                for (var i = j; i < records.length; i++) {
+                    records[i].idCoppy = records[i].id_product;
+                    records[i].idStatus = records[i].id_product + ',' + records[i].status;
 				
-				for (var i = j; i < records.length; i++) {
-                                        records[i].idCoppy = records[i].id_news + ',' + records[i].sellmore;
-                                        records[i].catName = arrCat[records[i].id_category];
-					records[i].gameName = arrGame[records[i].id_game];
-					
-					records[i].idsort = records[i].id_news + ',' + records[i].sort;
-					records[i].idStatus = records[i].id_news + ',' + records[i].status;
-					
-					
-                                };
+                };
 				
                 return records;
             }
@@ -73,7 +53,7 @@ var BACKEND = {
         return '<div style="overflow: hidden; text-overflow: ellipsis; padding-bottom: 2px; text-align: left; margin:4px 2px 0px 4px;">' + index + '</div>';
     },
     toolscolumnrender: function(row, datafield, value) {
-        return '<div class="grid-tools"><a href="javascript:void(0)" onclick="BACKEND.gridEdit(' + value + ');return false;" class="grid-tools"><span class="ui-icon ui-icon-pencil"></span></a><a href="javascript:void(0)" onclick="BACKEND.gridDelete(' + value + ');return false;"><span class="ui-icon ui-icon-trash"></span></a></div>';
+        return '<div class="grid-tools"><a href="javascript:void(0)" onclick="BACKEND.gridEdit(' + value + ');return false;" class="grid-tools"><span class="ui-icon ui-icon-pencil"></span></a></div>';
     },
     rankingcolumnrender: function(row, datafield, value) {
         var res = value.split(",");
@@ -99,7 +79,7 @@ var BACKEND = {
 	statuscolumnrender: function(row, datafield, value) {
         var res = value.split(",");
         var str= '<a href="javascript:void(0)" onclick="BACKEND.desable(' + res[0] + ');"><span class="data-status enable" title="Đã kích hoạt">&nbsp;</span></a>';
-        if (res[1] == 0) {
+        if (res[1] == 'off') {
             str = '<a href="javascript:void(0)" onclick="BACKEND.enable(' + res[0] + ');"><span class="data-status disable" title="Chưa kích hoạt">&nbsp;</span></a>';
         }
         return str;
@@ -117,19 +97,14 @@ var BACKEND = {
             columnsresize: true,
             sortable: true,
             //theme: 'energyblue',
-			theme: 'office',
+            theme: 'office',
             //theme: 'summer',
-			columns: [
+	    columns: [
                 {text: 'STT', cellsrenderer: BACKEND.sttcolumnrender, width: 40, filterable: false},
-                {text: 'TITLE', datafield: 'title'},
-		//{text: 'DESC', datafield: 'introtext'},
-		{text: 'GAME', datafield: 'id_game', width: 90},
-                {text: 'GAME NAME', datafield: 'gameName', filterable: false, sortable: false, width: 150},
-		{text: 'DANH MỤC', datafield: 'id_category', width: 90},
-		{text: 'CATEGORY NAME', datafield: 'catName', filterable: false, sortable: false, width: 150},
-		{text: 'CREATED TIME', datafield: 'create_time',filterable: false, sortable: false, width: 100},
-		{text: 'STATUS', datafield: 'idStatus', cellsrenderer: BACKEND.statuscolumnrender, width: 50,filterable: false, sortable: false},
-                {text: 'CÔNG CỤ', datafield: 'id_news', cellsalign: 'center', align: 'center', cellsrenderer: BACKEND.toolscolumnrender, width: 80, sortable: false, filterable: false},
+		{text: 'TITLE', datafield: 'name'},
+//		{text: 'CONTENT', datafield: 'description'},
+		{text: 'STATUS', datafield: 'idStatus', cellsrenderer: BACKEND.statuscolumnrender, width: 60,filterable: false, sortable: false},
+                {text: 'CÔNG CỤ', datafield: 'idCoppy', cellsalign: 'center', align: 'center', cellsrenderer: BACKEND.toolscolumnrender, width: 80, sortable: false, filterable: false},
             ],
             virtualmode: true,
             rendergridrows: function() {
@@ -168,7 +143,7 @@ var BACKEND = {
     },
     gridEdit: function(id) {
         //loadPopup(id, false);
-        window.location.href = '/backend/newsevent/add/' + id;
+        window.location.href = '/backend/product/add?id=' + id;
     },
     setBc: function(id){
         $.ajax({
@@ -256,19 +231,10 @@ var BACKEND = {
                 alert('Có lỗi ! Không kết nối đến dữ liệu được.');
             });
 	},
-    loadCat: function(){
-        $.ajax({
-                url: BACKEND.API_URL_CAT,
-                type: 'GET',
-                dataType: 'JSON',
-                data: {}
-            }).done(function(response) {
-                arrCat = response;                
-            })
-    },
+    
 	desable: function(id){
         $.ajax({
-                url: BACKEND.AJAX_URL_UPDATE + '?id=' + id + '&st=0&field=status',
+                url: BACKEND.AJAX_URL_UPDATE + '?id=' + id + '&st=off&field=status',
                 type: 'GET',
                 dataType: 'JSON',
                 data: {}
@@ -285,7 +251,7 @@ var BACKEND = {
     },
 	enable: function(id){
         $.ajax({
-                url: BACKEND.AJAX_URL_UPDATE + '?id=' + id + '&st=1&field=status',
+                url: BACKEND.AJAX_URL_UPDATE + '?id=' + id + '&st=on&field=status',
                 type: 'GET',
                 dataType: 'JSON',
                 data: {}

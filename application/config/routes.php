@@ -116,5 +116,14 @@ $route['backend/ajax/changepass'] = "admincp/admin_ajax/changepass";
 $route['backend/newsevent/category'] = "admincp/admin_newsevent/news_category";
 $route['backend/newsevent/addcategory'] = "admincp/admin_newsevent/news_addcategory";
 $route['backend/ajax/addnewseventimage'] = "admincp/admin_ajax/addnewseventimage";
+$route['backend/home/index'] = "admincp/admin_home/index";
+$route['backend/home/add'] = "admincp/admin_home/add";
+$route['backend/ajax/addslide'] = "admincp/admin_ajax/addslide";
+$route['backend/product/index'] = "admincp/admin_product/index";
+$route['backend/product/add'] = "admincp/admin_product/add";
+$route['backend/ajax/addproduct'] = "admincp/admin_ajax/addproduct";
+$route['backend/contact/index'] = "admincp/admin_contact/index";
+$route['backend/contact/detail'] = "admincp/admin_contact/detail";
+$route['backend/ajax/contact_count'] = "admincp/admin_ajax/contact_count";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

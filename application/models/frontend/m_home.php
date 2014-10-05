@@ -20,6 +20,7 @@ class M_home extends MY_Model {
                               ->from("product")
                               ->where("status", "on")
                 ;
+        $this->db_slave->order_by("id_product" , "DESC");
         if($offset != "")
             $this->db_slave->limit($limit, $offset);
         else 
@@ -32,6 +33,7 @@ class M_home extends MY_Model {
                               ->from("slide")
                               ->where("status", "on")
                 ;
+        $this->db_slave->order_by("id_slide" , "DESC");
         $sql = $this->db_slave->get();
         return $sql->result_array();
     }
