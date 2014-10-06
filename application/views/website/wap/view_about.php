@@ -50,7 +50,7 @@
                         <li>
                             <div class="main-list-li" >
                                 <div class="list-imag">
-                                    <a  href="<?php echo $value['image_big'] ?>"> <img class="thumbnail"  title="<?php echo $value['name'] . ' ' . $value['description'] ?>" src="<?php echo $value['image_small'] ?>" width="215px" height="128px"/></a>
+                                    <a  href="<?php echo $value['image_big'] ?>"> <img class="thumbnail"  alt="<?php echo $value['name'] . ' ' . $value['description'] ?>" src="<?php echo $value['image_small'] ?>" width="215px" height="128px"/></a>
                                 </div>
                                 <div class="sub-title">
                                     <span><h2><?php echo word_limiter($value['name'], 3) ?></h2></span>

@@ -117,6 +117,7 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
     /*display: inline-table;*/
     margin-bottom: 20px;
     float: left;
+    margin-left: 2%;
 }
 .main-list-li {
     width: 215px;
