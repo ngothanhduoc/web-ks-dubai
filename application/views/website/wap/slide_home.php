@@ -1,19 +1,30 @@
-<script src="/public/frontend/assets/js/sliderengine/amazingslider.js"></script>
-<script src="/public/frontend/assets/wap/js/wap_slide_config.js"></script>
+<script lang="text/javascript">
+    $(function () {
+        $(".slides").responsiveSlides({
+            auto: true,
+            pager: false,
+            nav: true,
+            speed: 200,
+            namespace: "callbacks"
+        });
+    })
+</script>
 <div class="slide" id="home-main">
-    <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
-        <ul class="amazingslider-slides" style="display:none;">
-            <?php
-                foreach ($slide as $key => $value) {
+
+    <ul class="slides">
+        <?php
+        foreach ($slide as $key => $value) {
             ?>
             <li>
-                <img src="<?php echo $value['image'] ?>" alt="<?php echo $value['name'] ." ".  $value['description'] ?>" style="width: 640px;"/>
+                <img src="<?php echo $value['image'] ?>" alt="<strong><?php echo $value['name'] . "</strong> " . $value['description'] ?>" />
+                <div class="caption"><strong><?php echo $value['name'] . "</strong> " . $value['description'] ?></div>
             </li>
-           <?php
-                }
-           ?>
-        </ul>
+            <?php
+        }
+        ?>
+    </ul>
 
 
-    </div>
 </div>
+
+

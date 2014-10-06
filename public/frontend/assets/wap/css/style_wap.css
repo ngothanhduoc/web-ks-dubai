@@ -21,9 +21,8 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
     background: #fff;
 }
 .container{
-    max-width: 640px;
+    max-width: 100%;
     margin: auto;
-
     font: normal normal normal 13px 'open sans', sans-serif;
     background: url("../image/bg.jpg") fixed ;
     background-attachment: fixed;
@@ -34,7 +33,7 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
 
 }
 .main-contant{
-    max-width: 640px;
+    max-width: 100%;
     min-height: 50px;
 
 }
@@ -104,7 +103,7 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
 }
 #about-main {
     padding: 10px;
-    text-align: justify;
+    
     min-height: 300px;
     color: #fff;
 }
@@ -113,10 +112,11 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
 }
 .main-list-about ul li {
     height: 215px;
+    width: 215px;
     background: #5C3535;
-    display: inline-table;
+    /*display: inline-table;*/
     margin-bottom: 20px;
-    margin-left: 12px;
+    float: left;
 }
 .main-list-li {
     width: 215px;
@@ -142,8 +142,8 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
     background: #fff;
 }
 .main-list-about{
-    max-width: 458px;
-    margin-left: 12%;
+    max-width: 72%;
+    margin: auto;
 }
 .show-more {
     text-align: center;
@@ -226,7 +226,7 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
 }
 .des-detail{
     color: #464646;
-    text-align: justify;
+    
 }
 a.read-more, a.read-less{
     color: #2c8ac0;
@@ -304,6 +304,8 @@ ul.rat li.inactive{
 }
 .slide{
     margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 @media only screen and (max-width:600px){
     .title-slide-home span a, .title-slide-home .news-event{
@@ -335,7 +337,6 @@ ul.rat li.inactive{
 }
 #menu-main, #reservations-main{
     padding: 10px;
-    text-align: justify;
 }
 #reservations-main{
     color: #fff;
@@ -356,7 +357,7 @@ ul.rat li.inactive{
     border-image-repeat: initial;
     padding: 5px;
     margin: 0px 0px 5px;
-    width: 100%;
+    width: 90%;
     -webkit-appearance: none;
     margin-right: 5px;
 }
@@ -374,7 +375,7 @@ ul.rat li.inactive{
     border-image-repeat: initial;
     padding: 5px;
     margin: 0px 0px 5px;
-    width: 100%;
+    width: 90%;
     resize: none;
     -webkit-appearance: none;
     min-height: 103px;
@@ -413,4 +414,10 @@ ul.rat li.inactive{
     width: 160px;
     margin-right: 155px;
     margin-bottom: 20px;
+}
+.caption, .caption p, .caption div, .caption a{
+    text-transform: capitalize;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
