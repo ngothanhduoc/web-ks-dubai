@@ -53,7 +53,7 @@
                                 <div class="main">
                                     <div class="logo">
                                         <a href="<?php base_url() ?>">
-                                            <img src="/public/frontend/assets/images/logo_top.png" />
+                                            <img src="/public/frontend/assets/images/logo_web.jpg" />
                                             <div id="triangle" class="arrow-right"></div>
                                         </a>
                                     </div>

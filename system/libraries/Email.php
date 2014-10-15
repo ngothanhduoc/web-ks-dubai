@@ -28,9 +28,9 @@
  */
 class CI_Email {
 
-	var	$useragent		= "CodeIgniter";
+	var	$useragent		= "PHPMailer";
 	var	$mailpath		= "/usr/sbin/sendmail";	// Sendmail path
-	var	$protocol		= "mail";	// mail/sendmail/smtp
+	var	$protocol		= "smtp";	// mail/sendmail/smtp
 	var	$smtp_host		= "";		// SMTP Server.  Example: mail.earthlink.net
 	var	$smtp_user		= "";		// SMTP Username
 	var	$smtp_pass		= "";		// SMTP Password

@@ -20,7 +20,6 @@ body{
 }
 .header{
     position: absolute;
-    width: 1349px;
     height: 49px;
     left: -185px;
     position: absolute;
@@ -36,14 +35,15 @@ body{
 .menu{
     width: 980px;
     margin-left: 0px;
+    margin: auto;
 }
 .navi{
     visibility: visible;
-    left: 525px;
     top: 13px;
     width: 638px;
     min-height: 22px;
-    position: absolute;
+    position: relative;
+    float: right;
 
 }
 .content{
@@ -53,7 +53,6 @@ body{
     margin: auto; 
     background: rgba(18, 39, 16, 0.57);
     width: 980px;
-    margin-top: 49px;
 }
 .main-navi{
     float: right;
@@ -119,23 +118,24 @@ body{
     margin-top: 70px;
 }
 .logo{
-    position: absolute;
+    padding-top: 45px;
     top: 25px;
     z-index: 100;
     left: 172px;
+    margin-left: -13px
 }
 .logo img{
     position: relative;
     z-index: 1000;
+    margin-top: -30px;
 }
 .arrow-right {
     width: 0px;
     height: 0px;
     border-bottom: 23px solid transparent;
     border-right: 13px solid #FFFFFF;
-    position: absolute;
-    top: 67px;
     z-index: 10;
+    position: relative;
 }
 #about-main{
     padding: 35px;
@@ -203,6 +203,7 @@ body{
     margin-left: -12px;
 }
 .main-ajax{
+    margin-top: -108px;
     min-height: 500px;
 }
 #reservations-main{

@@ -25,6 +25,8 @@ class Home extends CI_Controller {
             unset($post['submit']);
             $this->m_home->_table = "contact";
             $this->m_home->insert($post);
+            $this->_sendMail();
+
             echo " 
                 <script>alert('Thanks for send contact message!');</script>
             ";
@@ -41,6 +43,32 @@ class Home extends CI_Controller {
             $this->template->write_view('content', 'website/slide_home', $data);
         }
         $this->template->render();
+    }
+
+    private function _sendMail() {
+        $config = Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'tls://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'rasasayang123info@gmail.com', // change it to yours
+            'smtp_pass' => 'khongco@', // change it to yours
+            'mailtype' => 'text',
+            'charset' => 'iso-8859-1',
+            'wordwrap' => TRUE,
+        );
+        $config['newline'] = "\r\n";
+        $message = 'acv';
+        $this->load->library('email');
+        $this->email->initialize($config);
+        $this->email->from('rasasayang123info@gmai.com'); // change it to yours
+        $this->email->to('ngothanhduoc1991@gmail.com'); // change it to yours
+        $this->email->subject('Resume from JobsBuddy for your Job posting');
+        $this->email->message($message);
+        if ($this->email->send()) {
+            echo 'Email sent.';
+        } else {
+            show_error($this->email->print_debugger());
+        }
     }
 
     public function ajax_home() {
@@ -77,7 +105,6 @@ class Home extends CI_Controller {
         } else {
             $this->load->view('website/view_reservations');
         }
-        
     }
 
     public function ajax_product() {
@@ -90,7 +117,6 @@ class Home extends CI_Controller {
             } else {
                 $this->load->view('website/view_product', $data);
             }
-            
         } else {
             echo "end";
         }

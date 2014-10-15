@@ -18,7 +18,7 @@
                 }
                 
             }).fail(function () {
-                alert('Có lỗi ! Không kết nối đến dữ liệu được.');
+                
             });
         });
     });
@@ -30,8 +30,7 @@
         ?>
     </div>
     <div class="list-about">
-        <h3>THE ART OF SUSHI </h3>
-        <br/>
+        
         <div class="main-list-about">
             <ul>
                 <?php
