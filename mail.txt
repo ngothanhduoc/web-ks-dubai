@@ -1,0 +1,25 @@
+private function _sendMail($to, $message) {
+        /////////////////////////////////SEND MAIL//////////////////////
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => '465',
+            'smtp_user' => 'mecorp.payment@gmail.com',
+            'smtp_pass' => 'mecorp.payment2013'//Nhớ đánh đúng user và pass nhé
+        );
+
+        $this->load->library('email', $config);
+        $this->email->set_newline("\r\n");
+
+        $this->email->from('mecorp.payment@gmail.com', 'Mecorp.payment');
+        $this->email->to($to);
+        $this->email->subject('[Mecorp.payment] Check Link Died');
+        $this->email->message($message);
+
+        if ($this->email->send()) {
+            // echo "Mail đã được gửi cho bạn";
+        } else {
+            //show_error($this->email->print_debugger());
+        }
+        ///////////////////////////////////////////////////////////
+    }
