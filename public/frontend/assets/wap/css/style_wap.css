@@ -422,3 +422,9 @@ ul.rat li.inactive{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.alert{
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    display: none;
+}

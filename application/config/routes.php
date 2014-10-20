@@ -46,6 +46,7 @@ $route['ajax_about']= "website/home/ajax_about";
 $route['ajax_menu']= "website/home/ajax_menu";
 $route['ajax_reservations']= "website/home/ajax_reservations";
 $route['ajax_product']= "website/home/ajax_product";
+$route['send-mail']= "website/home/sendMail";
 
 
 /*--------End frontend------- */

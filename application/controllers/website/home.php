@@ -20,17 +20,6 @@ class Home extends CI_Controller {
     }
 
     public function index() {
-        $post = $this->input->post(NULL, TRUE);
-        if (!empty($post)) {
-            unset($post['submit']);
-            $this->m_home->_table = "contact";
-            $this->m_home->insert($post);
-            $this->_sendMail();
-
-            echo " 
-                <script>alert('Thanks for send contact message!');</script>
-            ";
-        }
 
         $this->m_home->_table = "article";
         $this->m_home->_key = "id";
@@ -45,30 +34,54 @@ class Home extends CI_Controller {
         $this->template->render();
     }
 
-    private function _sendMail() {
-        $config = Array(
-            'protocol' => 'smtp',
-            'smtp_host' => 'tls://smtp.googlemail.com',
-            'smtp_port' => 465,
-            'smtp_user' => 'rasasayang123info@gmail.com', // change it to yours
-            'smtp_pass' => 'khongco@', // change it to yours
-            'mailtype' => 'text',
-            'charset' => 'iso-8859-1',
-            'wordwrap' => TRUE,
-        );
-        $config['newline'] = "\r\n";
-        $message = 'acv';
-        $this->load->library('email');
-        $this->email->initialize($config);
-        $this->email->from('rasasayang123info@gmai.com'); // change it to yours
-        $this->email->to('ngothanhduoc1991@gmail.com'); // change it to yours
-        $this->email->subject('Resume from JobsBuddy for your Job posting');
-        $this->email->message($message);
-        if ($this->email->send()) {
-            echo 'Email sent.';
-        } else {
-            show_error($this->email->print_debugger());
+    public function sendMail() {
+
+        $post = $this->input->post(NULL, TRUE);
+        if (!empty($post)) {
+            unset($post['submit']);
+            $this->m_home->_table = "contact";
+            $this->m_home->insert($post);
+            $message = "Subject: " . $post['subject'] . "\r\n";
+            $message .= "Name: " . $post['name'] . "\r\n";
+            $message .= "Email: " . $post['email'] . "\r\n";
+            $message .= "Message: " . $post['message'] . "\r\n";
+
+
+         
+
+
+            /////////////////////////////////SEND MAIL//////////////////////
+            $config = array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'mail.rasasayangdubai.com',
+                'smtp_port' => '25',
+                'smtp_user' => 'info@rasasayangdubai.com',
+                'smtp_pass' => 'Summer@1'//Nhớ đánh đúng user và pass nhé
+            );
+
+            $this->load->library('email', $config);
+            $this->email->set_newline("\r\n");
+            $to = array('info@rasasayangdubai.com'); //
+            $this->email->from('info@rasasayangdubai.com', 'Alert Contact');
+            $this->email->to($to);
+            $this->email->subject('Alert Contact');
+            $this->email->message($message);
+
+            if ($this->email->send()) {
+                $result = array(
+                    'code' => 1000,
+                    'message' => "Send Success!",
+                );
+                exit(json_encode($result));
+            } else {
+                $result = array(
+                    'code' => 1001,
+                    'message' => "Error",
+                );
+                exit(json_encode($result));
+            }
         }
+        ///////////////////////////////////////////////////////////
     }
 
     public function ajax_home() {
