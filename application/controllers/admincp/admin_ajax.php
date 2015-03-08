@@ -208,7 +208,7 @@ class Admin_Ajax extends MY_Controller {
         $ctr = $this->check_security($ctr);
         $act = $this->check_security($act);
         $table = $this->check_security($table);
-        $field = $this->check_security($field);
+        $field = $this->check_security($field); 
         //-- Check user have permission to delete ------------------------------
         if (!isset($_SESSION[$ctr . '::' . $act . '::' . $table])) {
             redirect(base_url() . 'logout');
@@ -1204,6 +1204,7 @@ class Admin_Ajax extends MY_Controller {
                 $Params['image_big'] = $arrParam['image_big'];
                 $Params['name'] = $arrParam['name'];
                 $Params['description'] = $arrParam['description'];
+                $Params['id_group_product'] = $arrParam['id_group_product'];
 
                 if (empty($Id) === FALSE && is_numeric($Id)) {
                     $this->m_backend->jqxUpdate('product', 'id_product', $Id, $Params);

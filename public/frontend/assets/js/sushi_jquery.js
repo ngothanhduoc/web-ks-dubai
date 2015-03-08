@@ -9,6 +9,7 @@ var BACKEND = {
     API_URL_ABOUT: 'ajax_about',
     API_URL_MENU: 'ajax_menu',
     API_URL_RES: 'ajax_reservations',
+    API_URL_GROUP: 'ajax_group_product',
     OBJ_GRID: null,
     init: function () {
         $(".navi-menu").click(function () {
@@ -28,7 +29,7 @@ var BACKEND = {
                         BACKEND.ajax_all(BACKEND.API_URL_HOME);
                         break;
                     case "about":
-                        BACKEND.ajax_all(BACKEND.API_URL_ABOUT);
+                        BACKEND.ajax_all(BACKEND.API_URL_GROUP);
                         break;
                     case "menu":
                         BACKEND.ajax_all(BACKEND.API_URL_MENU);

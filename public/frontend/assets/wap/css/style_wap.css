@@ -103,7 +103,7 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
 }
 #about-main {
     padding: 10px;
-    
+
     min-height: 300px;
     color: #fff;
 }
@@ -227,7 +227,7 @@ body,input,textarea{font-size:14px;color:#000;font-family:"Arial"; margin: 0; pa
 }
 .des-detail{
     color: #464646;
-    
+
 }
 a.read-more, a.read-less{
     color: #2c8ac0;
@@ -427,4 +427,15 @@ ul.rat li.inactive{
     font-size: 16px;
     line-height: 50px;
     display: none;
+}
+.info-company {
+    margin-top: 25px;
+    padding-left: 10px;
+    padding-right: 8px;
+    text-align: justify;
+    color: #fff;
+    padding-bottom: 20px;
+    line-height: 20px;
+    background: rgba(39, 38, 38, 0.72);
+    padding-top: 10px;
 }

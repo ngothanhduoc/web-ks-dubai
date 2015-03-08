@@ -15,10 +15,11 @@ class M_home extends MY_Model {
         parent::__construct();
     }
 
-    function get_product($limit, $offset = ''){
+    function get_product($limit, $offset = '', $group){
         $this->db_slave->select("*")
                               ->from("product")
                               ->where("status", "on")
+                              ->where("id_group_product", $group)
                 ;
         $this->db_slave->order_by("id_product" , "DESC");
         if($offset != "")
@@ -37,6 +38,13 @@ class M_home extends MY_Model {
         $sql = $this->db_slave->get();
         return $sql->result_array();
     }
-    
+    function get_group_product(){
+        $this->db_slave->select("*")
+                              ->from("group_product")
+                ;
+        $sql = $this->db_slave->get();
+        return $sql->result_array();
+        
+    }
 
 }

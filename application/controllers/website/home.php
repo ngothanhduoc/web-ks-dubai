@@ -98,6 +98,7 @@ class Home extends CI_Controller {
         $this->m_home->_key = "id";
         $data = $this->m_home->get_by_id(2);
         $data['product'] = $this->m_home->get_product(12);
+        $data['group'] = $this->m_home->get_group_product();
         if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
             $this->load->view('website/wap/view_about', $data);
         } else {
@@ -105,6 +106,15 @@ class Home extends CI_Controller {
         }
     }
 
+    public function ajax_group_product() {
+        $data['group_product'] = $this->m_home->get_group_product();
+        if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
+            $this->load->view('website/wap/group_product', $data);
+        } else {
+            $this->load->view('website/group_product', $data);
+        }
+    }
+    
     public function ajax_menu() {
         $this->m_home->_table = "article";
         $this->m_home->_key = "id";
@@ -122,8 +132,9 @@ class Home extends CI_Controller {
 
     public function ajax_product() {
         $page = $this->input->get("page", TRUE);
+        $group = $this->input->get("group", TRUE);
         if (!is_array($page))
-            $data['product'] = $this->m_home->get_product(12, $page);
+            $data['product'] = $this->m_home->get_product(4, $page, $group);
         if (!empty($data['product'])) {
             if ($this->Detect->isMobile() || $this->Detect->isTablet()) {
                 $this->load->view('website/wap/view_product', $data);

@@ -46,6 +46,7 @@ $route['ajax_about']= "website/home/ajax_about";
 $route['ajax_menu']= "website/home/ajax_menu";
 $route['ajax_reservations']= "website/home/ajax_reservations";
 $route['ajax_product']= "website/home/ajax_product";
+$route['ajax_group_product']= "website/home/ajax_group_product";
 $route['send-mail']= "website/home/sendMail";
 
 
@@ -126,5 +127,7 @@ $route['backend/ajax/addproduct'] = "admincp/admin_ajax/addproduct";
 $route['backend/contact/index'] = "admincp/admin_contact/index";
 $route['backend/contact/detail'] = "admincp/admin_contact/detail";
 $route['backend/ajax/contact_count'] = "admincp/admin_ajax/contact_count";
+$route['backend/group_product/index'] = "admincp/admin_product/index_group_product";
+$route['backend/group_product/add'] = "admincp/admin_product/add_group_product";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
